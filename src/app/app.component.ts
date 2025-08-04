@@ -1,12 +1,21 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  template: `
+    <h1>Bienvenido a mi app</h1>
+    <!-- TODO: implementar autenticación -->
+  `,
 })
 export class AppComponent {
-  title = 'prueba-Eslint';
+  title = 'mi-aplicacion-angular';
+
+  constructor() {
+    console.log('AppComponent inicializado'); 
+  }
+
+  ngOnInit() {
+    let mensaje = 'Hola mundo'; 
+    console.log(mensaje);   
+  }
 }
